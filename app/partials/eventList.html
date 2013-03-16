@@ -1,0 +1,12 @@
+<div class="container">
+    <ul class="thumbnails span11">
+        <li ng-repeat="event in events" class="span5" ng-click="alertName(event)">
+            <div class="well hoverwell">
+                <div class="row"><span class="span6"><h2>{{event.name}}</h2></span></div>
+                <div class="row"><span class="span1">Location:</span> <span>{{event.location}}</span></div>
+                <div class="row"><span class="span1">Date:</span><span>{{event.date | date:"MM/dd/yyyy hh:mm"}}</span></div>
+                <div class="row"><span class="span1">Cost:</span><span>{{event.cost | currency}}</span></div>
+            </div>
+        </li>
+    </ul>
+</div>
