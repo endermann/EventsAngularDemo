@@ -10,4 +10,9 @@ function EventListController($scope, $location, eventData) {
 
 function EventController($scope, eventData, $routeParams) {
     $scope.event = _.findWhere(eventData.events, {id: parseInt($routeParams.eventId)});
+
+    $scope.upVoteSession = function(session) {
+        session.upVoteCount++;
+    }
+
 }
