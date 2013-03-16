@@ -2,7 +2,7 @@
 
 function MainMenuController($scope, authenticationService) {
     $scope.user = {};
-    $scope.$watch(authenticationService.getCurrentUserName(), function () {
+    $scope.$watch(authenticationService.getCurrentUserName, function () {
         $scope.user = authenticationService.getCurrentUser();
     });
 
