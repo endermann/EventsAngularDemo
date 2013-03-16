@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
 </head>
 <body>
+<div ng-init="data.events = [{name: 'Code Camp', location: 'Sandy, UT', cost:0},
+            {name: 'OpenWest', location: 'Orem, UT', cost:12345.6789},
+            {name: 'Google I/O', location: 'San Francisco, CA', cost:900.99}]; searchName = '';"></div>
 
-<input type="text" ng-model="data.value"/>
+<input type="text" ng-model="data.value" value=""/>
 <br/>
 <h1 class="{{data.value}}">Hello {{data.value}}</h1>
-<div ng-repeat="number in [ 'John', 'DOE', 'SMITH' ] | limitTo:3 ">
-    <h2>{{number | lowercase}} </h2>
+<h3>Name:</h3><input type="text" ng-model="searchName"/>
+<div ng-repeat="event in data.events | filter:{name:searchName} | orderBy:'firstName'">
+    <h3>{{event.name | lowercase}} - {{event.location}} - {{event.cost | currency}} </h3>
 </div>
 
 <script src="/js/jquery.min.js"></script>
