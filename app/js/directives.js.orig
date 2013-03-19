@@ -1,0 +1,25 @@
+'use strict';
+
+angular.module('myApp.directives', [])
+<<<<<<< HEAD
+    .directive('upvote', function() {
+       return {
+         restrict: 'E',
+         templateUrl: '/partials/upvote.html'
+       };
+=======
+    .directive('upvote', function () {
+        return {
+            restrict:"E",
+            templateUrl:"/partials/upvote.html",
+            scope: {
+                count: '=count',
+                upVoteFunction: '=func',
+                objectToUpVote: '=obj'
+            },
+            link:function(scope, element, attrs) {
+
+            }
+        }
+>>>>>>> 272274c45180468ded53473b06bb3d10b098fa0b
+    });
