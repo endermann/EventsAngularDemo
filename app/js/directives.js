@@ -7,7 +7,7 @@ angular.module('myApp.directives', [])
             templateUrl:"/partials/upvote.html",
             scope: {
                 count: '@count',
-                upVoteFunction: '&func'
+                upvote: '&func'
             }
         }
     });
