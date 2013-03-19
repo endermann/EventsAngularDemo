@@ -6,12 +6,8 @@ angular.module('myApp.directives', [])
             restrict:"E",
             templateUrl:"/partials/upvote.html",
             scope: {
-                count: '=count',
-                upVoteFunction: '=func',
-                objectToUpVote: '=obj'
-            },
-            link:function(scope, element, attrs) {
-
+                count: '@count',
+                upVoteFunction: '&func'
             }
         }
     });
