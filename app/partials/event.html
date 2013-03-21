@@ -1,0 +1,38 @@
+<div class="container">
+    <div id="me">
+        <div class="row">
+            <div class="span11">
+                <h2>{{event.name}}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span9">
+                <div><h5><strong>Date:</strong> {{event.date | date:"MM/dd/yyyy hh:mm"}}</h5></div>
+                <div><h5><strong>location:</strong> {{event.location}}</h5></div>
+            </div>
+        </div>
+
+        <hr/>
+
+        <h3>Sessions</h3>
+        <ul class="thumbnails">
+            <li ng-repeat="session in event.sessions | orderBy:'-upVoteCount'" class="span11">
+                <div class="well span9">
+                    <span class="span1 pull-right" ng-click="upVoteSession(session)">
+                        <div class="upvote">
+                            <i class="icon-chevron-up icon-white"></i>
+                        </div>
+                        <div class="badge badge-inverse">
+                            <div>{{session.upVoteCount}}</div>
+                        </div>
+                    </span>
+
+                    <h4>{{session.name}}</h4>
+                    <span>Duration: {{session.duration}}</span>
+
+                    <p>{{session.abstract}}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

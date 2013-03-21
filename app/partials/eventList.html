@@ -1,6 +1,6 @@
 <div class="container">
     <ul class="thumbnails span11">
-        <li ng-repeat="event in events" class="span5">
+        <li ng-repeat="event in events" class="span5" ng-click="showEvent(event)">
             <div class="well hoverwell">
                 <div class="row"><span class="span6"><h2>{{event.name}}</h2></span></div>
                 <div class="row"><span class="span1">Location:</span> <span>{{event.location}}</span></div>
