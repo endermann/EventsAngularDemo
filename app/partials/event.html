@@ -23,7 +23,7 @@
                     <h4>{{session.name}}</h4>
                     <span>Duration: {{session.duration}}</span>
 
-                    <p>{{session.abstract}}</p>
+                    <p>{{session.abstract | truncate:200}}</p>
                 </div>
             </li>
         </ul>
