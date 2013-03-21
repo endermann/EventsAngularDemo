@@ -18,7 +18,7 @@
         <ul class="thumbnails">
             <li ng-repeat="session in event.sessions | orderBy:'-upVoteCount'" class="span11">
                 <div class="well span9">
-                    <upvote />
+                    <upvote count="session.upVoteCount" func="upVoteSession(session)" />
 
                     <h4>{{session.name}}</h4>
                     <span>Duration: {{session.duration}}</span>
