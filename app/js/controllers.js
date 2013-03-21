@@ -7,7 +7,7 @@ function IndexController($scope) {
         {name: 'Google I/O', date: new Date(2013, 5,14, 9), location: 'San Francisco, CA', cost: 900.99}
     ];
 
-    $scope.alertName = function(event) {
-        alert(event.name);
+    $scope.editName = function(event) {
+        event.name = "foo";
     }
 }
