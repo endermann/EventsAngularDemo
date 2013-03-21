@@ -1,6 +1,6 @@
 'use strict';
 
-describe('IndexController', function () {
+describe('EventListController', function () {
     var controller;
     var scope;
 
@@ -8,7 +8,7 @@ describe('IndexController', function () {
         module('myApp');
         inject(function ($rootScope, $controller, eventData) {
             scope = $rootScope.$new();
-            controller = $controller(IndexController, {$scope: scope, eventData: eventData});
+            controller = $controller(EventListController, {$scope: scope, eventData: eventData});
         })
     });
 

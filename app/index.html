@@ -6,12 +6,9 @@
     <link rel="stylesheet" href="/css/app.css"/>
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
 </head>
-<body ng-controller="IndexController">
+<body>
 
-<div ng-repeat="event in events">
-    <input ng-model="event.name"/>
-    <h2 ng-click="editName(event)">{{event.name | lowercase }} - {{event.location}} - <span ng-hide="event.name == 'OpenWest'">{{event.cost | currency}}</span></h2>
-</div>
+<div ng-view></div>
 
 <script src="/js/jquery.min.js"></script>
 <script src="/lib/angular/angular.js"></script>

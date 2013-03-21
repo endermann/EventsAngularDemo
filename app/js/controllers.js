@@ -1,6 +1,6 @@
 'use strict';
 
-function IndexController($scope, eventData) {
+function EventListController($scope, eventData) {
     $scope.events = eventData.events;
 
     $scope.editName = function(event) {
